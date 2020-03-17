@@ -17,7 +17,6 @@ public class JsonReporter {
         int port = server.getPort();
         System.out.println("Listening on port:" + port);
         server.awaitTermination();
-        System.exit(0);
     }
 
 }

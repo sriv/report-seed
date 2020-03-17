@@ -1,21 +1,16 @@
 package org.gauge;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.Socket;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import com.thoughtworks.gauge.Messages.*;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
 public class ExampleReporter {
-    private static final String LOCALHOST = "127.0.0.1";
     // Set the output directory
     private static final String ReportDir = "";
     // Set the output filename
@@ -32,7 +27,6 @@ public class ExampleReporter {
         int port = server.getPort();
         System.out.println("Listening on port:" + port);
         server.awaitTermination();
-        System.exit(0);
     }
 
     // This method is useful if the plugin plans to write the report output to filesystem.
